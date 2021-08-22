@@ -2,6 +2,8 @@ package com.trillion.eagle.myapplication;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
    StrongMarqueeView mMarqueeView1,mMarqueeView2;
@@ -10,6 +12,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Log.d("MainActivity", "  #packageName :" + getPackageName());
+        Toast.makeText(MainActivity.this, getPackageName(), Toast.LENGTH_LONG).show();
 
         mMarqueeView1 = (StrongMarqueeView) findViewById(R.id.marqueeView1);
         mMarqueeView2 = (StrongMarqueeView) findViewById(R.id.marqueeView2);
